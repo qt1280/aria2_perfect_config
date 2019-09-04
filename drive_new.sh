@@ -1,5 +1,5 @@
 #!/bin/bash
-yum -y update
+yum -y update wget
 yum -y install epel-release
 yum -y install wget git unzip gcc gcc-c++ openssl-devel nginx
 systemctl start nginx
@@ -16,11 +16,11 @@ rm -rf master.zip AriaNg-DailyBuild-master
 cd /etc/nginx/conf.d
 touch ariang.conf
 
-myip=`wget http://ipecho.net/plain -O - -q echo`
+IP=`curl -s http://ipecho.net/plain`;
 
 echo "server {
     listen 80;
-    servername myip;
+    server_name ${IP};
 
     location / {
         root   /data/www/ariang;
