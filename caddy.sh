@@ -12,6 +12,9 @@ rm -rf master.zip AriaNg-DailyBuild-master
 curl https://rclone.org/install.sh | sudo bash
 yum -y install  fuse
 rclone config
+curTime=$(date "+%H%M%S") 
+touch ${curTime}.html
+rclone move ${curTime}.html joe1280:alishare
 cd /root/
 wget -N --no-check-certificate https://raw.githubusercontent.com/qt1280/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh
 
