@@ -5,8 +5,8 @@
 #Blog: https://p3terx.com
 
 downloadpath='/root/Download' #Aria2下载目录
-name='Onedrive' #配置Rclone时填写的name
-folder='/DRIVEX/Download' #网盘里的文件夹，留空为整个网盘。
+name='joe1280' #配置Rclone时填写的name
+folder='/alisahre' #网盘里的文件夹，留空为整个网盘。
 
 #=================下面不需要修改===================
 filepath=$3 #Aria2传递给脚本的文件路径。BT下载有多个文件时该值为文件夹内第一个文件，如/root/Download/a/b/1.mp4
