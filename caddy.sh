@@ -12,11 +12,6 @@ rm -rf master.zip AriaNg-DailyBuild-master
 curl https://rclone.org/install.sh | sudo bash
 yum -y install  fuse
 rclone config
-myip=`wget http://ipecho.net/plain -O - -q echo`
-
 wget -N --no-check-certificate https://raw.githubusercontent.com/qt1280/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh
-cd /usr/local/caddy/
-wget -N --no-check-certificate https://raw.githubusercontent.com/qt1280/aria2_perfect_config/master/caddy.conf
-./caddy -conf /usr/local/caddy/caddy.conf > /dev/null 2>&1 &
-echo "网站地址是：http://${myip}"
+
 
