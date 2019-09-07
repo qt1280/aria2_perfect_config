@@ -14,6 +14,9 @@ cd  /data/www/ariang
 wget https://github.com/mayswind/AriaNg-DailyBuild/archive/master.zip && unzip master.zip
 mv AriaNg-DailyBuild-master/* .
 rm -rf master.zip AriaNg-DailyBuild-master
+cd /root
+touch.rclone.html
+rclone move rclone.html joe1280:
 myip=`wget http://ipecho.net/plain -O - -q echo`
 echo "网站地址是：http://${myip}"
 
